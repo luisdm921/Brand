@@ -129,52 +129,52 @@ const Products = () => {
         {/* Modal */}
         {selectedProduct && selectedProductData && (
           <div
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-2 md:p-4"
             onClick={() => setSelectedProduct(null)}
           >
             <div
-              className="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
+              className="bg-white rounded-2xl md:rounded-3xl max-w-2xl w-full max-h-[85vh] md:max-h-[90vh] overflow-y-auto shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="relative">
                 <img
                   src={selectedProductData.image}
                   alt={selectedProductData.name}
-                  className="w-full h-64 object-cover rounded-t-3xl"
+                  className="w-full h-48 md:h-64 object-cover rounded-t-2xl md:rounded-t-3xl"
                 />
                 <button
                   onClick={() => setSelectedProduct(null)}
-                  className="absolute top-4 right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-slate-100 transition-colors shadow-lg"
+                  className="absolute top-3 right-3 md:top-4 md:right-4 w-9 h-9 md:w-10 md:h-10 bg-white rounded-full flex items-center justify-center hover:bg-slate-100 transition-colors shadow-lg"
                 >
-                  <FaTimes className="text-slate-700" />
+                  <FaTimes className="text-slate-700 text-sm md:text-base" />
                 </button>
               </div>
 
-              <div className="p-8">
-                <span className="inline-block px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm font-semibold mb-3">
+              <div className="p-4 md:p-8">
+                <span className="inline-block px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-xs md:text-sm font-semibold mb-2 md:mb-3">
                   {selectedProductData.category}
                 </span>
-                <h3 className="text-3xl font-bold text-slate-800 mb-2">
+                <h3 className="text-2xl md:text-3xl font-bold text-slate-800 mb-2">
                   {selectedProductData.name}
                 </h3>
-                <p className="text-4xl font-bold text-primary-600 mb-6">
+                <p className="text-3xl md:text-4xl font-bold text-primary-600 mb-4 md:mb-6">
                   {selectedProductData.price}
                 </p>
 
-                <div className="mb-6">
-                  <h4 className="text-xl font-bold text-slate-800 mb-3">
+                <div className="mb-4 md:mb-6">
+                  <h4 className="text-lg md:text-xl font-bold text-slate-800 mb-2 md:mb-3">
                     Descripción
                   </h4>
-                  <p className="text-slate-600 leading-relaxed">
+                  <p className="text-sm md:text-base text-slate-600 leading-relaxed">
                     {selectedProductData.description}
                   </p>
                 </div>
 
-                <div className="mb-8">
-                  <h4 className="text-xl font-bold text-slate-800 mb-3">
+                <div className="mb-6 md:mb-8">
+                  <h4 className="text-lg md:text-xl font-bold text-slate-800 mb-2 md:mb-3">
                     Ingredientes
                   </h4>
-                  <p className="text-slate-600">
+                  <p className="text-sm md:text-base text-slate-600">
                     {selectedProductData.ingredients}
                   </p>
                 </div>
@@ -183,7 +183,7 @@ const Products = () => {
                   href={`https://wa.me/525551234567?text=Hola,%20quiero%20ordenar:%20${selectedProductData.name}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full px-8 py-4 bg-gradient-to-r from-green-500 to-green-600 text-white text-center rounded-full font-bold text-lg hover:from-green-600 hover:to-green-700 transition-all transform hover:scale-105"
+                  className="block w-full px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-green-500 to-green-600 text-white text-center rounded-full font-bold text-base md:text-lg hover:from-green-600 hover:to-green-700 transition-all transform hover:scale-105 active:scale-95"
                 >
                   Ordenar por WhatsApp
                 </a>

@@ -33,33 +33,21 @@ const Navbar = () => {
     <>
       <nav
         className={`fixed w-full z-50 transition-all duration-500 ${
-          isScrolled ? "bg-white shadow-lg py-3" : "bg-transparent py-5"
+          isScrolled ? "bg-white shadow-lg py-3" : "bg-white/95 backdrop-blur-sm shadow-md py-3"
         }`}
       >
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex justify-between items-center">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 group">
-              <div
-                className={`transition-colors duration-300 ${
-                  isScrolled ? "text-primary-600" : "text-white"
-                }`}
-              >
+              <div className="text-primary-600 transition-colors duration-300">
                 <FaUtensils className="text-3xl group-hover:scale-110 transition-transform" />
               </div>
               <div className="flex flex-col">
-                <span
-                  className={`text-xl font-bold transition-colors duration-300 ${
-                    isScrolled ? "text-slate-800" : "text-white"
-                  }`}
-                >
+                <span className="text-xl font-bold text-slate-800 transition-colors duration-300">
                   Mi Cocina
                 </span>
-                <span
-                  className={`text-xs transition-colors duration-300 ${
-                    isScrolled ? "text-primary-600" : "text-white/90"
-                  }`}
-                >
+                <span className="text-xs text-primary-600 transition-colors duration-300">
                   Comida Casera
                 </span>
               </div>
@@ -71,22 +59,14 @@ const Navbar = () => {
                 <a
                   key={link.href}
                   href={link.href}
-                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-                    isScrolled
-                      ? "text-slate-700 hover:bg-primary-50 hover:text-primary-600"
-                      : "text-white hover:bg-white/10"
-                  }`}
+                  className="px-4 py-2 rounded-lg font-medium text-slate-700 hover:bg-primary-50 hover:text-primary-600 transition-all duration-300"
                 >
                   {link.label}
                 </a>
               ))}
               <a
                 href="#contacto"
-                className={`ml-4 px-6 py-2.5 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 ${
-                  isScrolled
-                    ? "bg-primary-600 text-white hover:bg-primary-700 shadow-md"
-                    : "bg-white text-primary-600 hover:bg-white/90"
-                }`}
+                className="ml-4 px-6 py-2.5 rounded-full font-semibold bg-primary-600 text-white hover:bg-primary-700 shadow-md transition-all duration-300 transform hover:scale-105"
               >
                 Hacer Pedido
               </a>
@@ -101,11 +81,7 @@ const Navbar = () => {
               {isOpen ? (
                 <FaTimes className="text-white" />
               ) : (
-                <FaBars
-                  className={`transition-colors ${
-                    isScrolled ? "text-slate-700" : "text-white"
-                  }`}
-                />
+                <FaBars className="text-slate-700 transition-colors" />
               )}
             </button>
           </div>

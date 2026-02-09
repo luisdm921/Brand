@@ -46,7 +46,7 @@ const Testimonials = () => {
                 ))}
               </div>
               <p className="text-slate-600 mb-6 italic">
-                "{testimonial.comment}"
+                &ldquo;{testimonial.comment}&rdquo;
               </p>
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full"></div>
